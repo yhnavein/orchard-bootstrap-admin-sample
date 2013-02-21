@@ -1,0 +1,7 @@
+﻿Name: BootstrapAdminSample
+AntiForgery: disabled
+Author: PureDev
+Website: http://blog.puredev.eu
+Version: 1.0
+OrchardVersion: 1.6
+Description: Sample views created for using extended functionality of Bootstrap theme in the Admin Panel

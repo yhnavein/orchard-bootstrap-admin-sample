@@ -1,0 +1,168 @@
+﻿@{
+    Layout.Title = T("Sample");
+}
+
+<div class="button-controls">
+    <a href='#' class="btn btn-primary" data-title='@T("Some tooltip")' data-placement="right" rel="tooltip"><i class="icon-plus icon-white"></i>
+        @T("Something new")
+    </a>
+    <form action="#" method="POST" style="display: inline;">
+      <div class="input-append pull-right">
+          <input class="span4" id="SearchForm_Query" name="SearchForm.Query" size="16" type="text" />
+          <input class="btn" type="submit" value='@T("Search") &raquo;' />
+      </div>
+    </form>
+</div>
+
+<table class="table table-condensed table-hover" id="some-table">
+  <thead>
+    <tr>
+      <th>@T("Number")</th>
+      <th>@T("Date")</th>
+      <th>@T("Name")</th>
+      <th>@T("City")</th>
+      <th>@T("Address")</th>
+      <th>@T("Invoice cost")</th>
+      <th>@T("Status")</th>
+      <th class="control-column"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>123</td>
+      <td>2013-02-10</td>
+      <td>
+        <i class="icon-briefcase"></i>
+        Google Corp.
+      </td>
+      <td>Mountain View</td>
+      <td>1600 Amphitheatre Parkway</td>
+      <td>€ 124.65</td>
+      <td class="status">
+        <span class="label label-success"> <i class="icon-ok icon-white"></i> @("Paid")</span>
+      </td>
+      <td>
+        <div class="btn-group right">
+          <a class="btn dropdown-toggle btn-mini" data-toggle="dropdown" href="#"><i class="icon-tag"></i>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">
+                <i class="icon-search"></i> @T("Details")
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-pencil"></i> @T("Edit")
+              </a>
+            </li>
+
+            <li class="divider"></li>
+
+            <li>
+              <a href="#">
+                <i class="icon-trash"></i> @T("Remove")
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>155</td>
+      <td>2013-01-02</td>
+      <td>
+        <i class="icon-briefcase"></i>
+        Microsoft Corp.
+      </td>
+      <td>Redmond</td>
+      <td>One Microsoft Way</td>
+      <td>€ 199 445.51</td>
+      <td class="status">
+        <span class="label label-inverse"> <i class="icon-fire icon-white"></i> @("Overdue!")</span>
+      </td>
+      <td>
+        <div class="btn-group right">
+          <a class="btn dropdown-toggle btn-mini" data-toggle="dropdown" href="#"><i class="icon-tag"></i>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">
+                <i class="icon-search"></i> @T("Details")
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-pencil"></i> @T("Edit")
+              </a>
+            </li>
+
+            <li class="divider"></li>
+
+            <li>
+              <a href="#">
+                <i class="icon-trash"></i> @T("Remove")
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>129</td>
+      <td>2013-02-01</td>
+      <td>
+        <i class="icon-user"></i>
+        Kenneth Biller
+      </td>
+      <td>New York</td>
+      <td>4790 Water Street</td>
+      <td>€ 250 451.14</td>
+      <td class="status">
+        <span class="label label-important"> <i class="icon-remove icon-white"></i> @("Not Paid")</span>
+      </td>
+      <td>
+        <div class="btn-group right">
+          <a class="btn dropdown-toggle btn-mini" data-toggle="dropdown" href="#"><i class="icon-tag"></i>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">
+                <i class="icon-search"></i> @T("Details")
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="icon-pencil"></i> @T("Edit")
+              </a>
+            </li>
+
+            <li class="divider"></li>
+
+            <li>
+              <a href="#">
+                <i class="icon-trash"></i> @T("Remove")
+              </a>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+@using (Script.Foot())
+{
+  <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+          $('#some-table').dataTable({
+              "sDom": "<'row-fluid'<'span6'l><'span6'>r>t<'row-fluid'<'span6'i><'span6'p>>",
+              "sPaginationType": "bootstrap",
+              "aaSorting": [[0, "desc"]]
+          });
+    });
+  </script>
+}
