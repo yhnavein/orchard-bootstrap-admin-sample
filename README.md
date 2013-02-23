@@ -30,10 +30,12 @@ Go to your **Themes** directory in your Orchard installation and execute below c
   git clone https://github.com/yhnavein/orchard-bootstrap-admin-sample.git BootstrapAdminSample
   ```
 
-There will be also possibility to download this module simply from Orchard Gallery.
-
 2. Login to your admin panel in your Orchard installation
 3. Go to Modules and click **Enable** near to the **Bootstrap Admin Sample** (by default as Uncategorized)
+
+### Gallery
+
+Module is available also in Orchard Gallery. Module name: **[Bootstrap Admin Theme Samples](https://gallery.orchardproject.net/List/Modules/PureDevBootstrapSample)**
 
 
 ## Credits
